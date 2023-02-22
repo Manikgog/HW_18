@@ -33,6 +33,41 @@ double max_(double a, double b, double c) {
 	return max < c ? c : max;
 }
 
+void print_arr(int* arr, const int size) {
+	std::cout << "[ ";
+	for (int i = 0; i < size; ++i) {
+		std::cout << arr[i] << ", ";
+	}
+	std::cout << "\b\b ]\n";
+}
+
+void fill_arr(int* arr, const int size, int low, int hi) {
+	for (int i = 0; i < size; ++i) {
+
+		arr[i] = rand() % (hi + 1 - low) + low;
+
+	}
+}
+
+template <typename T>
+int prime_number(T arr[], const int size) {
+	for (int i = 0; i < size; ++i) {
+		int count = 0;
+		if (arr[i] == 0 || arr[i] == 1)
+			continue;
+		for (int j = 2; j <= arr[i] / 2; ++j) {
+			if (arr[i] % j == 0) {
+				count++;
+				break;
+			}
+		}
+		if (count == 0) {
+			return arr[i];
+		}
+	}
+	return -1;
+}
+
 
 int main() {
 	setlocale(LC_ALL, "Russian");
@@ -79,14 +114,14 @@ int main() {
 	std::cout << "The arithmetic mean is equal to " << armean(a, b, c) << ".\n";*/
 
 
-	// Exercise 2.
+	// Exercise 3.
 	/*
 			Create an overloaded function to find
 	the maximum of the three values passed to it.
 	The function must support int, short, and double types.
 	The function should also output the type of values passed to it.
 	*/
-	int type = 1;
+	/*int type = 1;
 
 	std::cout << "Exercise 3.\nA program for finding the maximum of three numbers.\nEnter type (1)int, (2)short, (3)double -> ";
 	std::cin >> type;
@@ -108,11 +143,26 @@ int main() {
 	}
 	else {
 		std::cout << "Input error!\n";
-	}
+	}*/
 	
 
-
-
+	// Exercise 4.
+	/*
+		Write a template function that accepts
+	an array of any type and its length of type int. 
+	The function must find the first prime number in 
+	the array and return it as the result of its work.
+	*/
+	std::cout << "Exercise 4.\nProgramm for finding first prime number in the array.\nArray:\n";
+	const int size = 10;
+	int arr[size];
+	fill_arr(arr, size, 0, 10);
+	print_arr(arr, size);
+	int pr_num = prime_number(arr, size);
+	if (pr_num > 0)
+		std::cout << "Prime number is equal to " << pr_num << std::endl;
+	else
+		std::cout << "There is no prime number in the array.\n";
 
 
 
