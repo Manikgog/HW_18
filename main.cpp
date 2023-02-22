@@ -33,12 +33,6 @@ double max_(double a, double b, double c) {
 	return max < c ? c : max;
 }
 
-template <typename T>
-void input_numbers() {
-	T a, b, c;
-	std::cout << "Enter three numbers -> ";
-	std::cin >> a >> b >> c;
-}
 
 int main() {
 	setlocale(LC_ALL, "Russian");
