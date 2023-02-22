@@ -15,8 +15,30 @@ inline double armean(double num1, double num2, double num3) {
 	return (double)(num1 + num2 + num3) / 3;
 }
 
+int max_(int a, int b, int c) {
+	int max = a;
+	max = max < b ? b : max;
+	return max < c ? c : max;
+}
 
+short max_(short a, short b, short c) {
+	short max = a;
+	max = max < b ? b : max;
+	return max < c ? c : max;
+}
 
+double max_(double a, double b, double c) {
+	double max = a;
+	max = max < b ? b : max;
+	return max < c ? c : max;
+}
+
+template <typename T>
+void input_numbers() {
+	T a, b, c;
+	std::cout << "Enter three numbers -> ";
+	std::cin >> a >> b >> c;
+}
 
 int main() {
 	setlocale(LC_ALL, "Russian");
@@ -31,7 +53,7 @@ int main() {
 	The default parameters must be used for the solution. Note that
 	there must be one mandatory parameter in the function.
 	*/
-	std::cout << "Exercise 1.\nA program for calculating the sum of numbers.\nEnter the number of numbers: ";
+	/*std::cout << "Exercise 1.\nA program for calculating the sum of numbers.\nEnter the number of numbers: ";
 	int amount, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0;
 	std::cin >> amount;
 	for (int i = 1; i <= amount; ++i) {
@@ -48,7 +70,7 @@ int main() {
 			std::cin >> n5;
 	}
 	
-	std::cout << "The sum of the entered numbers is equal to " << summ(n1, n2, n3, n4, n5) << std::endl;
+	std::cout << "The sum of the entered numbers is equal to " << summ(n1, n2, n3, n4, n5) << std::endl;*/
 
 
 	// Exercise 2.
@@ -57,10 +79,10 @@ int main() {
 	takes three numbers and returns their
 	arithmetic mean.
 	*/
-	std::cout << "Exercise 2.\nCalculation of the arithmetic mean of three numbers.\nEnter three numbers -> ";
+	/*std::cout << "Exercise 2.\nCalculation of the arithmetic mean of three numbers.\nEnter three numbers -> ";
 	double a, b, c;
 	std::cin >> a >> b >> c;
-	std::cout << "The arithmetic mean is equal to " << armean(a, b, c) << ".\n";
+	std::cout << "The arithmetic mean is equal to " << armean(a, b, c) << ".\n";*/
 
 
 	// Exercise 2.
@@ -70,7 +92,30 @@ int main() {
 	The function must support int, short, and double types.
 	The function should also output the type of values passed to it.
 	*/
+	int type = 1;
 
+	std::cout << "Exercise 3.\nA program for finding the maximum of three numbers.\nEnter type (1)int, (2)short, (3)double -> ";
+	std::cin >> type;
+	std::cout << "Enter three numbers -> ";
+	if (type == 1) {
+		int a, b, c;
+		std::cin >> a >> b >> c;
+		std::cout << "max_(" << a << ", " << b << ", " << c << ") = " << max_(a, b, c) << std::endl;
+	}
+	else if (type == 2) {
+		short a, b, c;
+		std::cin >> a >> b >> c;
+		std::cout << "max_(" << a << ", " << b << ", " << c << ") = " << max_(a, b, c) << std::endl;
+	}
+	else if (type == 3) {
+		double a, b, c;
+		std::cin >> a >> b >> c;
+		std::cout << "max_(" << a << ", " << b << ", " << c << ") = " << max_(a, b, c) << std::endl;
+	}
+	else {
+		std::cout << "Input error!\n";
+	}
+	
 
 
 
