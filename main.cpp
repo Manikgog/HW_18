@@ -82,7 +82,7 @@ int main() {
 	The default parameters must be used for the solution. Note that
 	there must be one mandatory parameter in the function.
 	*/
-	/*std::cout << "Exercise 1.\nA program for calculating the sum of numbers.\nEnter the number of numbers: ";
+	std::cout << "Exercise 1.\nA program for calculating the sum of numbers.\nEnter the number of numbers: ";
 	int amount, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0;
 	std::cin >> amount;
 	for (int i = 1; i <= amount; ++i) {
@@ -99,7 +99,7 @@ int main() {
 			std::cin >> n5;
 	}
 	
-	std::cout << "The sum of the entered numbers is equal to " << summ(n1, n2, n3, n4, n5) << std::endl;*/
+	std::cout << "The sum of the entered numbers is equal to " << summ(n1, n2, n3, n4, n5) << "\n\n\n";
 
 
 	// Exercise 2.
@@ -108,10 +108,10 @@ int main() {
 	takes three numbers and returns their
 	arithmetic mean.
 	*/
-	/*std::cout << "Exercise 2.\nCalculation of the arithmetic mean of three numbers.\nEnter three numbers -> ";
+	std::cout << "Exercise 2.\nCalculation of the arithmetic mean of three numbers.\nEnter three numbers -> ";
 	double a, b, c;
 	std::cin >> a >> b >> c;
-	std::cout << "The arithmetic mean is equal to " << armean(a, b, c) << ".\n";*/
+	std::cout << "The arithmetic mean is equal to " << armean(a, b, c) << ".\n\n\n";
 
 
 	// Exercise 3.
@@ -121,7 +121,7 @@ int main() {
 	The function must support int, short, and double types.
 	The function should also output the type of values passed to it.
 	*/
-	/*int type = 1;
+	int type = 1;
 
 	std::cout << "Exercise 3.\nA program for finding the maximum of three numbers.\nEnter type (1)int, (2)short, (3)double -> ";
 	std::cin >> type;
@@ -143,8 +143,8 @@ int main() {
 	}
 	else {
 		std::cout << "Input error!\n";
-	}*/
-	
+	}
+	std::cout << "\n\n";
 
 	// Exercise 4.
 	/*
@@ -160,9 +160,9 @@ int main() {
 	print_arr(arr, size);
 	int pr_num = prime_number(arr, size);
 	if (pr_num > 0)
-		std::cout << "Prime number is equal to " << pr_num << std::endl;
+		std::cout << "Prime number is equal to " << pr_num << "\n\n\n";
 	else
-		std::cout << "There is no prime number in the array.\n";
+		std::cout << "There is no prime number in the array.\n\n\n";
 
 
 
