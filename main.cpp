@@ -16,18 +16,21 @@ inline double armean(double num1, double num2, double num3) {
 }
 
 int max_(int a, int b, int c) {
+	std::cout << "Variables of type INT were passed to the function.\n";
 	int max = a;
 	max = max < b ? b : max;
 	return max < c ? c : max;
 }
 
 short max_(short a, short b, short c) {
+	std::cout << "Variables of type SHORT were passed to the function.\n";
 	short max = a;
 	max = max < b ? b : max;
 	return max < c ? c : max;
 }
 
 double max_(double a, double b, double c) {
+	std::cout << "Variables of type DOUBLE were passed to the function.\n";
 	double max = a;
 	max = max < b ? b : max;
 	return max < c ? c : max;
